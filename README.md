@@ -8,7 +8,9 @@ Les conditions a remplir pour le TP sont en `bas` du document
 Une fois que vous avez cloner les éléments, faite npm installe afin de installer les packages a installer 
 
 #### Packages qui sont sur ce projet 
-
+Ce qui a était installer 
+  - @heroicons/react `est une bibliotheque d'icone en SVG`
+  - clsx `est une bibliotheque qui permet de générer une liste de classes CSS `
 
 #### Comment faire une installation NextJS 
 
