@@ -1,6 +1,7 @@
 import { ArrowDownCircleIcon } from '@heroicons/react/24/outline';
 import React from 'react';
 import Image from 'next/image'
+import PatientQueue from '../ui/dashboard/patientQueue';
 
 export default function DateNow() {
     const now = new Date();
@@ -21,14 +22,15 @@ export default function DateNow() {
                     </div>
                     {/* mettre le petit message  */}
                  </div>
+                 {/* ouverture du troisieme colonne  */}
                  <div >
                     {/* Upcoming */}
                     <div className='bg-[#2CD0CD] w-30 p-2 rounded-full'>
                         <p className='flex pl-10 ml-20'>UpComing Patient <ArrowDownCircleIcon className=" mx-3 w-6 h-6"/></p>
                     </div>
-                    <div className="grid grid-cols-2 gap-2 bg-[#334D46] mt-10 w-30">
+                    <div className="grid grid-cols-2 gap-2  mt-10 w-30">
                         {/* premiere div pour l'image */}
-                        <div className='bg-[#FFFFFF] rounded-2xl m-3'>
+                        <div className=' rounded-2xl m-3'>
                             <Image 
                             src="/tete.png"
                             width={500}
@@ -38,7 +40,7 @@ export default function DateNow() {
                             />
                         </div>
                         {/* Deuxieme div pour le reste */}
-                        <div className='bg-[#F73F3F] ml-0 mr-3 '>
+                        <div className=' ml-0 mr-3'>
                             <h2 className='font-sans font-medium mt-20 '>Dean Ferrera</h2>
                             <h3 className=" font-sans text-[#94AAA3] ">  Patient since Jan, 2021</h3>
                             <div className='flex'>
@@ -48,11 +50,19 @@ export default function DateNow() {
                         </div>
 
                     </div>
-
                  </div>
+                 {/* fermeture de la deuxieme colonne */}
+                 {/* Ouverture de la troisieme colonne  */}
+                 <div>
+                    <PatientQueue />
+                 </div>
+                 {/* Fermeture de la troisieme colonne  */}
+                 {/* Ouverture de la quatrieme colonne  */}
                  <div>
 
                  </div>
+                 {/* Fermeture de la quatrieme colonne */}
+
             </div>
         </div>
     );
