@@ -5,7 +5,6 @@ import {Personnes }from './definitions';
 export async function fetchPersonne() {
     // Add noStore() here to prevent the response from being cached.
     // This is equivalent to in fetch(..., {cache: 'no-store'}).
-    noStore();
   
   
     try {

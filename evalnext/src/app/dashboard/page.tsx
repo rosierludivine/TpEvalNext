@@ -33,7 +33,7 @@ export default function DateNow() {
                  {/* ouverture du troisieme colonne  */}
                  <div >
                     {/* Upcoming */}
-                    <div className='bg-[#2CD0CD] w-30 p-2 rounded-full shadow-lg'>
+                    <div className='bg-[#2CD0CD] w-30 p-2 rounded-full'>
                         <p className='flex pl-10 ml-20'>UpComing Patient <ArrowDownCircleIcon className=" mx-3 w-6 h-6"/></p>
                     </div>
                     {/* Creation de 2 colonnes */}
@@ -66,7 +66,7 @@ export default function DateNow() {
                  {/* fermeture de la deuxieme colonne */}
                  {/* Ouverture de la troisieme colonne  */}
                  <div>
-                    <PatientQueue personnes={[Personnes.id]} />
+                    <PatientQueue />
                  </div>
                  {/* Fermeture de la troisieme colonne  */}
                  {/* Ouverture de la quatrieme colonne  */}

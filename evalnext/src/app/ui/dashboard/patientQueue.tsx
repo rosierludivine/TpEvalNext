@@ -1,48 +1,42 @@
-import {postgresConnectionString, sql} from '@vercel/postgres'
-import Image from "next/image";
-import {
-    PersonnesTableType,
-    FormattedPersonnesTable,
-  } from '@/app/lib/definitions';
-  
+import { fetchPersonne } from '@/app/lib/data';
+import clsx from 'clsx';
+import Image from 'next/image';
+import { Personnes } from '@/app/lib/placeholder-data';
 
-export default function PatientQueue ({
-    personnes,
-  }: {
-    personnes: FormattedPersonnesTable[];
-  }){
+export default async function PatientQueue() {
+  const personnes = await fetchPersonne();
 
-    if (!personnes) {
-        return (
-        <div className=" text-balances border-2 border-[#BFDDD9] rounded-xl  w-30 font-sans">
-            <span className='  font-medium text-xl row-auto p-20 ml-10'>Patient Queue </span>
-            <span className='divide-[#243c5a]'></span>
-            <h3  className='text-wrap mt-2 ml-10 '>Vous n'avez pas de rendez-vous aujourd'hui</h3>
-        </div>)
-      }
-
-    return(
-        // Nombre de ligne automatique 
-        < div className=' shadow-lg row-auto border-2 border-[#BFDDD9] rounded-xl p_2 w-30 font-sans'> 
-        {/*  */}
-            <div className=" ">
-                <span className='ml-20 p-20 font-medium text-xl'>Patient Queue </span>
-            </div>
-            <div className=' ml-10 p_2 w-30 font-sans'> 
-                hello 
-                <div className='grid-cols-2'> 
-                    <div>
-                        
-                    </div>
-                    <div>
-                    {/* metter l'image  */}
-                    <p className=''></p>
-                    </div>
-
+  return (
+    <div className="shadow-lg border-2 border-[#BFDDD9] rounded-xl p-2 w-30 font-sans">
+      <div className="">
+        <span className="ml-10 p-10 font-medium text-xl">Patient Queue</span>
+      </div>
+      <div className="overflow-y-auto max-h-40"> {/* Ici, la hauteur maximale est fixée à 40 */}
+        {personnes.map((personne, i) => {
+          return (
+            <div
+              key={personne.id}
+              className={clsx('flex flex-row items-center justify-between py-4', {
+                'border-t': i !== 0,
+              })}
+            >
+              <div className="flex items-center">
+                <Image
+                  src={personne.image_url}
+                  alt={`${personne.name}'s profile picture`}
+                  className="mr-4 rounded-full"
+                  width={32}
+                  height={32}
+                />
+                <div className="min-w-0">
+                  <p className="truncate text-sm font-semibold md:text-base">{personne.name}</p>
+                  <p className="hidden text-sm text-gray-500 sm:block">{personne.email}</p>
                 </div>
+              </div>
             </div>
-
-            
-        </div> 
-    )
+          );
+        })}
+      </div>
+    </div>
+  );
 }
