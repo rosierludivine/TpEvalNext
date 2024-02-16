@@ -15,13 +15,13 @@ const users = [
       id: '3958dc9e-712f-4377-85e9-fec4b6a6442a',
       name: 'Delba de Oliveira',
       email: 'delba@oliveira.com',
-      image_url: '/peronnes/delba-de-oliveira.png',
+      image_url: '/personnes/delba-de-oliveira.png',
     },
     {
       id: '3958dc9e-742f-4377-85e9-fec4b6a6442a',
       name: 'Lee Robinson',
       email: 'lee@robinson.com',
-      image_url: '/peronnes/lee-robinson.png',
+      image_url: '/personnes/lee-robinson.png',
     },
     {
       id: '3958dc9e-737f-4377-85e9-fec4b6a6442a',
