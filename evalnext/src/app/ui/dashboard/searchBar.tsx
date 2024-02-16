@@ -31,17 +31,22 @@ export default function searchBar({ placeholder }: { placeholder: string }){
   }, 300);
 
     return (
-        <div className=" flex flex-1 flex-shrink-0  bg-[#FFFFFF]">
+        <div className="text-3xl mt-20 font-['Open_Sans'] text-center">
+            <h3 className=' text-[#95A9A3]'><span className='text-[#283D37]'>To invite</span> someone to your room</h3>
+            <h3 className=' text-[#95A9A3]'>share the link below </h3>
+        
+        <div className=" flex flex-1 flex-shrink-0  mt-5 bg-[#FFFFFF] justify-center">
+            
       <label htmlFor="search" className="sr-only">
         Search
       </label>
       <input
-        className=" block w-60 h-10 rounded-full border border-gray-200 py-[9px] pl-10 text-sm outline-2 placeholder:text-gray-500 ml-20 bg-[#EBF6F5]"
+        className="pl-20 block w-4/6 h-10 content-center rounded-full py-[9px] text-sm outline-2 placeholder:text-gray-500  bg-[#EBF6F5]"
         placeholder={placeholder} 
         onChange={(e) => {handleSearch(e.target.value);}}
         defaultValue={searchParams.get('query')?.toString()}
       />
-      <MagnifyingGlassIcon className="absolute left-3 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-gray-500 peer-focus:text-gray-900" />
+    </div>
     </div>
     )
 }

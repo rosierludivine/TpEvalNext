@@ -19,10 +19,14 @@ export default function NowDate(){
                         <p className="max-w-md font-['Open_Sans'] color-[#0E2A23]">
                               <span style={{ fontSize: '50px', color: 'black'}}>{firstLetterCapitallized}</span>
                              <br />
-                            <span className='flex font-serif text-8xl content-center text-black' style={{ fontSize: '30px', color: 'black'}}>{date}</span>
+                            <span className='flex font-serif text-6xl content-center text-black' >{date}</span>
                         </p>
                     </div>
                     {/* mettre le petit message  */}
+                    <div className='grid grid-cols-1 divide-x-2  mt-9 ml-5 divide-[#243c5a] '>
+                        <h3 className='ml-6'> Hi Martha </h3>
+                    </div>
+                    
                  </div>
     )
 }

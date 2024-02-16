@@ -28,7 +28,7 @@ export type FormattedPersonnesTable = {
   image_url: string;
 };
 
-export type CustomerField = {
+export type PersonnesField = {
   id: string;
   name: string;
 };

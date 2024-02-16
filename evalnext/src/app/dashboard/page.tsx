@@ -37,9 +37,10 @@ export default function Page() {
 
                     </div>
                 </div>
-                <div className='w-full h-30 bg-[#FFFFFF]'>
-            <SearchBar placeholder="Search peoples..." />
-            </div>
+                <div className='w-screen h-30 items-center  bg-[#FFFFFF]'>
+
+                    <SearchBar placeholder="Search peoples..."  />
+                </div>
             </div>
 
             
