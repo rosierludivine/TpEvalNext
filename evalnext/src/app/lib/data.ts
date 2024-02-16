@@ -32,7 +32,7 @@ export async function fetchPersonne() {
         SELECT
           id,
           name
-        FROM customers
+        FROM personne
         ORDER BY name ASC
       `;
   
