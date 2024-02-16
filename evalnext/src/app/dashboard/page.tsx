@@ -34,7 +34,7 @@ export default function DateNow() {
                  <div >
                     {/* Upcoming */}
                     <div className='bg-[#2CD0CD] w-30 p-2 rounded-full'>
-                        <p className='flex pl-10 ml-20'>UpComing Patient <ArrowDownCircleIcon className=" mx-3 w-6 h-6"/></p>
+                        <p className='flex pl-10 ml-10'>UpComing Patient <ArrowDownCircleIcon className=" mx-3 w-6 h-6"/></p>
                     </div>
                     {/* Creation de 2 colonnes */}
                     <div className="grid grid-cols-2 gap-2  mt-10 w-30 ">
